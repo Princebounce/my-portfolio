@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Code, Brackets, Settings, Terminal, GitBranch, Send, SendHorizontal, FileCode } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const HomePage = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const HomePage = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,10 +20,31 @@ const HomePage = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          timestamp: new Date().toLocaleString(),
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const projects = [
@@ -145,6 +168,7 @@ const HomePage = () => {
                 placeholder="Your Name"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-cyan-400 transition-colors"
                 required
+                disabled={isSubmitting}
               />
             </div>
             
@@ -159,6 +183,7 @@ const HomePage = () => {
                 placeholder="Your Email"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-cyan-400 transition-colors"
                 required
+                disabled={isSubmitting}
               />
             </div>
             
@@ -173,14 +198,16 @@ const HomePage = () => {
                 rows={6}
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="bg-cyan-400 text-gray-900 px-8 py-3 rounded-md font-semibold hover:bg-cyan-300 transition-colors"
+              className="bg-cyan-400 text-gray-900 px-8 py-3 rounded-md font-semibold hover:bg-cyan-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

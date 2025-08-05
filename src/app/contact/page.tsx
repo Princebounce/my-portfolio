@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const ContactPage = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -17,10 +19,31 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          timestamp: new Date().toLocaleString(),
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,6 +98,7 @@ const ContactPage = () => {
                     placeholder="Your Name"
                     className="w-full px-4 py-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-white placeholder-gray-400"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -89,6 +113,7 @@ const ContactPage = () => {
                     placeholder="Your Email"
                     className="w-full px-4 py-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-white placeholder-gray-400"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -103,14 +128,16 @@ const ContactPage = () => {
                     rows={6}
                     className="w-full px-4 py-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all text-white placeholder-gray-400 resize-none"
                     required
+                    disabled={isSubmitting}
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-cyan-400 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-cyan-400 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

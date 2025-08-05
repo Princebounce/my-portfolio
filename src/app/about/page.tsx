@@ -54,7 +54,7 @@ const AboutPage = () => {
               </div>
 
               <a
-                href="/assets/resume/Ayo_Lawal_Resume.pdf"
+                href="/assets/documents/Ayo_Lawal_Resume.pdf"
                 download="Ayo_Lawal_Resume.pdf"
                 className="inline-block bg-gray-700 text-white px-8 py-3 rounded-md hover:bg-gray-600 transition-colors"
               >

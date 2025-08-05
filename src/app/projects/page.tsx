@@ -28,8 +28,8 @@ const ProjectsPage = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["React", "Chart.js", "Redux", "Styled-components"],
       features: ["Interactive charts (bar, line, pie)", "Real-time data updates", "Customizable filters", "Responsive design"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://gatewayshieldadmin.netlify.app",
+      githubUrl: "https://github.com/GATEWAY-SHIELD/gs-admin-fe",
       color: "from-teal-200 via-cyan-300 to-teal-400"
     },
     {
@@ -40,8 +40,20 @@ const ProjectsPage = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       technologies: ["Next.js", "TypeScript", "Stripe", "Prisma"],
       features: ["User authentication", "Payment integration", "Admin dashboard", "Inventory management"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://github.com/GATEWAY-SHIELD/gs-admin-fe",
+      githubUrl: "https://github.com/Princebounce/Mandifun",
+      color: "from-purple-200 via-pink-300 to-purple-400"
+    },
+    {
+      id: 4,
+      title: "E-commerce Platform",
+      description: "Full-stack e-commerce solution with authentication, payments, and admin dashboard for seamless online shopping.",
+      fullDescription: "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma"],
+      features: ["User authentication", "Payment integration", "Admin dashboard", "Inventory management"],
+      liveUrl: "https://ayo-lawal.netlify.com",
+      githubUrl: "https://github.com/Princebounce/my-portfolio",
       color: "from-purple-200 via-pink-300 to-purple-400"
     }
   ];
