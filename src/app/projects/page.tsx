@@ -46,15 +46,15 @@ const ProjectsPage = () => {
     },
     {
       id: 4,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with authentication, payments, and admin dashboard for seamless online shopping.",
-      fullDescription: "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-      features: ["User authentication", "Payment integration", "Admin dashboard", "Inventory management"],
-      liveUrl: "https://ayo-lawal.netlify.com",
+      title: "Personal Portfolio Website",
+      description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and dark theme design.",
+      fullDescription: "This portfolio website is built with Next.js and Tailwind CSS, featuring a sleek dark theme, smooth animations, and responsive design. It includes sections for projects, skills, about me, and contact form with EmailJS integration for seamless communication.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "Typescript", "Tailwind CSS", "EmailJS", "Vercel", "React"],
+      features: ["Responsive dark theme design", "Interactive project showcase", "Contact form with email integration", "Smooth animations and transitions", "SEO optimized"],
+      liveUrl: "https://ayo-lawal.vercel.app",
       githubUrl: "https://github.com/Princebounce/my-portfolio",
-      color: "from-purple-200 via-pink-300 to-purple-400"
+      color: "from-blue-200 via-indigo-300 to-purple-400"
     }
   ];
 
@@ -90,6 +90,15 @@ const ProjectsPage = () => {
                   <div className="absolute inset-0">
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-600 rounded-full transform translate-y-1/2 -translate-x-1/4 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
                     <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500 rounded-full transform -translate-y-1/4 translate-x-1/4 opacity-90 group-hover:scale-110 transition-transform duration-500"></div>
+                  </div>
+                ) : selectedProject === 3 ? (
+                  // Special design for portfolio - code/web theme
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
+                    <div className="text-center text-white">
+                      <div className="text-6xl mb-4">💻</div>
+                      <div className="text-xl font-bold">&lt;/&gt;</div>
+                      <div className="text-sm mt-2">Portfolio</div>
+                    </div>
                   </div>
                 ) : (
                   <img 
@@ -230,6 +239,14 @@ const ProjectsPage = () => {
                     <div className="absolute inset-0">
                       <div className="absolute bottom-0 left-0 w-32 h-32 bg-slate-600 rounded-full transform translate-y-1/2 -translate-x-1/4 opacity-80"></div>
                       <div className="absolute top-0 right-0 w-28 h-28 bg-teal-500 rounded-full transform -translate-y-1/4 translate-x-1/4 opacity-90"></div>
+                    </div>
+                  ) : index === 3 ? (
+                    // Portfolio design
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
+                      <div className="text-center text-white">
+                        <div className="text-3xl mb-2">💻</div>
+                        <div className="text-sm font-bold">&lt;/&gt;</div>
+                      </div>
                     </div>
                   ) : (
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
