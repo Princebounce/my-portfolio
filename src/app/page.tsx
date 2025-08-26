@@ -51,19 +51,19 @@ const HomePage = () => {
     {
       title: "Pomocus - Pomodoro Timer",
       description: "A modern Pomodoro timer application built with React to help users boost productivity through structured work sessions.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&crop=center",
+      image: "/assets/images/pomodoro.jpg",
       link: "/projects"
     },
     {
-      title: "Interactive Dashboard",
-      description: "An interactive dashboard for data visualization and user management with dynamic charts and real-time updates.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
+      title: "Gateway Shield",
+      description: "A secure, direct platform for reporting crimes and receiving community safety alerts from law enforcement.",
+      image: "/assets/images/gatewayshield.png",
       link: "/projects"
     },
     {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with Next.js and Tailwind CSS showcasing projects and skills.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop&crop=center",
+      title: "Shopivol",
+      description: "A website builder that helps SMEs quickly create professional business websites without coding.",
+      image: "/assets/images/shopivol.png",
       link: "/projects"
     }
   ];

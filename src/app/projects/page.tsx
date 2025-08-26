@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 const ProjectsPage = () => {
@@ -10,52 +10,121 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: "Pomocus - Pomodoro Focus Timer",
-      description: "A modern Pomodoro timer application built with React to help users boost productivity through structured work sessions and breaks.",
-      fullDescription: "Pomocus is a clean, intuitive Pomodoro timer web application designed to help users enhance their productivity using the proven Pomodoro Technique. Features customizable timer sessions, automatic progression between work and break periods, and a minimalist interface that eliminates distractions during focus time.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["React", "Create React App", "JavaScript", "CSS3", "Vercel"],
-      features: ["25-minute focus sessions", "Customizable break intervals", "Session progress tracking", "Clean, distraction-free UI", "Responsive design"],
-      liveUrl: "https://pomocus.vercel.app/",
-      githubUrl: "https://github.com/Princebounce/pomocus",
-      color: "from-orange-200 via-red-300 to-pink-400"
-    },
-    {
-      id: 2,
-      title: "Interactive Data Visualization Dashboard",
-      description: "An interactive dashboard with dynamic charts, filters, and real-time updates for exploring complex datasets effectively.",
-      fullDescription: "This project is an interactive data visualization dashboard designed to provide users with a comprehensive overview of complex datasets. It features dynamic charts, filters, and real-time updates, allowing users to explore data trends and patterns effectively.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      title: "Gateway  Shield",
+      description:
+        "A secure, direct platform for reporting crimes and receiving community safety alerts from law enforcement.",
+      fullDescription:
+        "Gateway Shield, a digital platform designed to strengthen collaboration between citizens and the police. The app allows users to quickly report incidents with text, images, and location data, while also receiving real-time alerts about nearby threats. It integrates features like crime mapping and community updates, making safety information more accessible. The project was developed in partnership with law enforcement agencies to provide a secure and reliable communication channel.",
+      image:
+        "/assets/images/gatewayshield.png",
       technologies: ["React", "Chart.js", "Redux", "Styled-components"],
-      features: ["Interactive charts (bar, line, pie)", "Real-time data updates", "Customizable filters", "Responsive design"],
-      liveUrl: "https://gatewayshieldadmin.netlify.app",
+      features: [
+        "Interactive charts (bar, line, pie)",
+        "Real-time data updates",
+        "Customizable filters",
+        "Responsive design",
+      ],
+      liveUrl: "https://thegatewayshield.com",
       githubUrl: "https://github.com/GATEWAY-SHIELD/gs-admin-fe",
-      color: "from-teal-200 via-cyan-300 to-teal-400"
+      color: "from-teal-200 via-cyan-300 to-teal-400",
+    },
+    
+     {
+      id: 2,
+      title: "Shopivol",
+      description:
+        "A website builder that helps SMEs quickly create professional business websites without coding.",
+      fullDescription:
+        "Shopivol is a platform designed to empower small and medium-sized businesses by providing tools to launch customizable, professional websites in minutes. The solution focuses on simplicity, speed, and flexibility—helping entrepreneurs showcase products, services, and brands without technical expertise. I contributed to building and optimizing the user experience, ensuring responsive design and smooth workflows that make website creation accessible to non-technical users.",
+      image: "/assets/images/shopivol.png",
+      technologies: ["Nextjs", "Tailwind CSS", "React", "Typescript"],
+      features: [
+        "Drag-and-drop website builder",
+        "Customizable templates",
+        "Mobile-responsive design",
+        "Quick business site deployment",
+        "E-commerce support",
+      ],
+      liveUrl: "https://www.shopivol.com/",
+      githubUrl: "https://github.com/kokombo/Shopivol",
+      color: "from-blue-200 via-indigo-300 to-purple-400",
     },
     {
       id: 3,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with authentication, payments, and admin dashboard for seamless online shopping.",
-      fullDescription: "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-      features: ["User authentication", "Payment integration", "Admin dashboard", "Inventory management"],
-      liveUrl: "https://github.com/GATEWAY-SHIELD/gs-admin-fe",
-      githubUrl: "https://github.com/Princebounce/Mandifun",
-      color: "from-purple-200 via-pink-300 to-purple-400"
+      title: "Pomocus - Pomodoro Focus Timer",
+      description:
+        "A modern Pomodoro timer application built with React to help users boost productivity through structured work sessions and breaks.",
+      fullDescription:
+        "Pomocus is a clean, intuitive Pomodoro timer web application designed to help users enhance their productivity using the proven Pomodoro Technique. Features customizable timer sessions, automatic progression between work and break periods, and a minimalist interface that eliminates distractions during focus time.",
+      image:
+        "/assets/images/pomodoro.jpg",
+      technologies: [
+        "React",
+        "Create React App",
+        "JavaScript",
+        "CSS3",
+        "Vercel",
+      ],
+      features: [
+        "25-minute focus sessions",
+        "Customizable break intervals",
+        "Session progress tracking",
+        "Clean, distraction-free UI",
+        "Responsive design",
+      ],
+      liveUrl: "https://pomocus.vercel.app/",
+      githubUrl: "https://github.com/Princebounce/pomocus",
+      color: "from-orange-200 via-red-300 to-pink-400",
     },
     {
       id: 4,
+      title: "Fizzart",
+      description:
+        "Full-stack e-commerce solution with authentication, payments, and admin dashboard for seamless online shopping.",
+      fullDescription:
+        "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
+      image:
+        "/assets/images/fizzart.jpg",
+      technologies: ["Next.js", "TypeScript", "Paystack", "Prisma"],
+      features: [
+        "User authentication",
+        "Payment integration",
+        "Admin dashboard",
+        "Inventory management",
+      ],
+      liveUrl: "",
+      githubUrl: "https://github.com/Princebounce/fizzart",
+      color: "from-purple-200 via-pink-300 to-purple-400",
+    },
+    {
+      id: 5,
       title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and dark theme design.",
-      fullDescription: "This portfolio website is built with Next.js and Tailwind CSS, featuring a sleek dark theme, smooth animations, and responsive design. It includes sections for projects, skills, about me, and contact form with EmailJS integration for seamless communication.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "Typescript", "Tailwind CSS", "EmailJS", "Vercel", "React"],
-      features: ["Responsive dark theme design", "Interactive project showcase", "Contact form with email integration", "Smooth animations and transitions", "SEO optimized"],
+      description:
+        "A modern, responsive portfolio website showcasing projects and skills with smooth animations and dark theme design.",
+      fullDescription:
+        "This portfolio website is built with Next.js and Tailwind CSS, featuring a sleek dark theme, smooth animations, and responsive design. It includes sections for projects, skills, about me, and contact form with EmailJS integration for seamless communication.",
+      image:
+        "/assets/images/portfolio.jpg",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Tailwind CSS",
+        "EmailJS",
+        "Vercel",
+        "React",
+      ],
+      features: [
+        "Responsive dark theme design",
+        "Interactive project showcase",
+        "Contact form with email integration",
+        "Smooth animations and transitions",
+        "SEO optimized",
+      ],
       liveUrl: "https://ayo-lawal.vercel.app",
       githubUrl: "https://github.com/Princebounce/my-portfolio",
-      color: "from-blue-200 via-indigo-300 to-purple-400"
-    }
+      color: "from-blue-200 via-indigo-300 to-purple-400",
+    },
+   
   ];
 
   const currentProject = projects[selectedProject];
@@ -65,7 +134,9 @@ const ProjectsPage = () => {
       {/* Projects Showcase */}
       <section className="px-6 py-12">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Featured Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            Featured Projects
+          </h1>
           <p className="text-lg text-gray-300 text-center mb-12">
             Explore my latest work and technical achievements
           </p>
@@ -74,40 +145,15 @@ const ProjectsPage = () => {
             {/* Project Showcase */}
             <div className="order-2 lg:order-1">
               {/* Project Image */}
-              <div className={`h-80 bg-gradient-to-br ${currentProject.color} rounded-2xl relative overflow-hidden mb-6 group cursor-pointer`}>
-                {selectedProject === 0 ? (
-                  // Special design for Pomocus - timer/productivity theme
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-48 border-8 border-orange-300 rounded-full relative">
-                      <div className="absolute inset-4 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
-                        <div className="text-white font-bold text-2xl">25:00</div>
-                      </div>
-                      <div className="absolute top-0 left-1/2 w-2 h-6 bg-orange-600 transform -translate-x-1/2 -translate-y-1"></div>
-                    </div>
-                  </div>
-                ) : selectedProject === 1 ? (
-                  // Special geometric design for dashboard
-                  <div className="absolute inset-0">
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-600 rounded-full transform translate-y-1/2 -translate-x-1/4 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                    <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500 rounded-full transform -translate-y-1/4 translate-x-1/4 opacity-90 group-hover:scale-110 transition-transform duration-500"></div>
-                  </div>
-                ) : selectedProject === 3 ? (
-                  // Special design for portfolio - code/web theme
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
-                    <div className="text-center text-white">
-                      <div className="text-6xl mb-4">💻</div>
-                      <div className="text-xl font-bold">&lt;/&gt;</div>
-                      <div className="text-sm mt-2">Portfolio</div>
-                    </div>
-                  </div>
-                ) : (
-                  <img 
-                    src={currentProject.image} 
-                    alt={currentProject.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
-                
+              <div
+                className={`h-80 bg-gradient-to-br ${currentProject.color} rounded-2xl relative overflow-hidden mb-6 group cursor-pointer`}
+              >
+                <img
+                  src={currentProject.image}
+                  alt={currentProject.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
                 {/* Overlay with quick actions */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a
@@ -128,26 +174,40 @@ const ProjectsPage = () => {
               {/* Project Navigation */}
               <div className="flex justify-center items-center gap-4">
                 <button
-                  onClick={() => setSelectedProject(selectedProject === 0 ? projects.length - 1 : selectedProject - 1)}
+                  onClick={() =>
+                    setSelectedProject(
+                      selectedProject === 0
+                        ? projects.length - 1
+                        : selectedProject - 1
+                    )
+                  }
                   className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                
+
                 <div className="flex gap-2">
                   {projects.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedProject(index)}
                       className={`w-3 h-3 rounded-full transition-colors ${
-                        index === selectedProject ? 'bg-cyan-400' : 'bg-gray-600 hover:bg-gray-500'
+                        index === selectedProject
+                          ? "bg-cyan-400"
+                          : "bg-gray-600 hover:bg-gray-500"
                       }`}
                     />
                   ))}
                 </div>
-                
+
                 <button
-                  onClick={() => setSelectedProject(selectedProject === projects.length - 1 ? 0 : selectedProject + 1)}
+                  onClick={() =>
+                    setSelectedProject(
+                      selectedProject === projects.length - 1
+                        ? 0
+                        : selectedProject + 1
+                    )
+                  }
                   className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -158,7 +218,9 @@ const ProjectsPage = () => {
             {/* Project Details */}
             <div className="order-1 lg:order-2 space-y-6">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">{currentProject.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  {currentProject.title}
+                </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   {currentProject.fullDescription}
                 </p>
@@ -166,7 +228,9 @@ const ProjectsPage = () => {
 
               {/* Key Features */}
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Key Features</h3>
+                <h3 className="text-xl font-semibold mb-3 text-cyan-400">
+                  Key Features
+                </h3>
                 <ul className="space-y-2">
                   {currentProject.features.map((feature, index) => (
                     <li key={index} className="flex items-start text-gray-300">
@@ -179,10 +243,15 @@ const ProjectsPage = () => {
 
               {/* Technologies */}
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Technologies</h3>
+                <h3 className="text-xl font-semibold mb-3 text-cyan-400">
+                  Technologies
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.technologies.map((tech) => (
-                    <span key={tech} className="bg-gray-700 px-3 py-2 rounded-lg text-sm font-medium">
+                    <span
+                      key={tech}
+                      className="bg-gray-700 px-3 py-2 rounded-lg text-sm font-medium"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -224,37 +293,22 @@ const ProjectsPage = () => {
                 onClick={() => setSelectedProject(index)}
                 className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
-                <div className={`h-40 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
-                  {index === 0 ? (
-                    // Pomocus timer design
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-24 h-24 border-4 border-orange-300 rounded-full relative">
-                        <div className="absolute inset-1 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
-                          <div className="text-white font-bold text-xs">25:00</div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : index === 1 ? (
-                    // Dashboard geometric design
-                    <div className="absolute inset-0">
-                      <div className="absolute bottom-0 left-0 w-32 h-32 bg-slate-600 rounded-full transform translate-y-1/2 -translate-x-1/4 opacity-80"></div>
-                      <div className="absolute top-0 right-0 w-28 h-28 bg-teal-500 rounded-full transform -translate-y-1/4 translate-x-1/4 opacity-90"></div>
-                    </div>
-                  ) : index === 3 ? (
-                    // Portfolio design
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
-                      <div className="text-center text-white">
-                        <div className="text-3xl mb-2">💻</div>
-                        <div className="text-sm font-bold">&lt;/&gt;</div>
-                      </div>
-                    </div>
-                  ) : (
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  )}
+                <div
+                  className={`h-40 bg-gradient-to-br ${project.color} relative overflow-hidden`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold mb-2 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
-                  <p className="text-gray-400 text-sm line-clamp-2">{project.description}</p>
+                  <h3 className="font-bold mb-2 group-hover:text-cyan-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">
+                    {project.description}
+                  </p>
                 </div>
               </div>
             ))}

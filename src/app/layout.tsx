@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./globals.css";
@@ -24,15 +25,21 @@ export default function RootLayout({
       <body className="bg-gray-900 text-white min-h-screen">
         {/* Navigation */}
         <nav className="bg-gray-800 px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-cyan-400 transform rotate-45"></div>
-            <Link
-              href="/"
-              className="text-xl font-semibold hover:text-cyan-400 transition-colors"
-            >
-              Ayo Lawal
-            </Link>
-          </div>
+         <div className="flex items-center space-x-3">
+  <Image
+    src="/assets/images/ayo-lawal-logo.png"
+    alt="Ayo Lawal Logo"
+    width={32}
+    height={32}
+    className="rounded bg-white p-1"
+  />
+  <Link
+    href="/"
+    className="text-xl font-semibold hover:text-cyan-400 transition-colors"
+  >
+    Ayo Lawal
+  </Link>
+</div>
 
           <div className="hidden md:flex space-x-8">
             <Link
