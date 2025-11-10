@@ -78,21 +78,21 @@ const ProjectsPage = () => {
     },
     {
       id: 4,
-      title: "Fizzart",
+      title: "Tasif Essence",
       description:
         "Full-stack e-commerce solution with authentication, payments, and admin dashboard for seamless online shopping.",
       fullDescription:
         "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
       image:
         "/assets/images/fizzart.jpg",
-      technologies: ["Next.js", "TypeScript", "Paystack", "Prisma"],
+      technologies: ["Next.js", "TypeScript", "Paystack", "Prisma", "MySQL"],
       features: [
         "User authentication",
         "Payment integration",
         "Admin dashboard",
         "Inventory management",
       ],
-      liveUrl: "",
+      liveUrl: "https://tasifessence.vercel.app/",
       githubUrl: "https://github.com/Princebounce/fizzart",
       color: "from-purple-200 via-pink-300 to-purple-400",
     },
