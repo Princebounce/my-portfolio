@@ -85,7 +85,7 @@ const ProjectsPage = () => {
         "A comprehensive e-commerce platform built with modern technologies featuring user authentication, payment processing, inventory management, and a powerful admin dashboard.",
       image:
         "/assets/images/fizzart.jpg",
-      technologies: ["Next.js", "TypeScript", "Paystack", "Prisma", "MySQL"],
+      technologies: ["NextJs", "TypeScript", "Paystack", "Prisma", "SQLite"],
       features: [
         "User authentication",
         "Payment integration",
@@ -93,7 +93,7 @@ const ProjectsPage = () => {
         "Inventory management",
       ],
       liveUrl: "https://tasifessence.vercel.app/",
-      githubUrl: "https://github.com/Princebounce/fizzart",
+      githubUrl: "https://github.com/Princebounce/tasif-essence",
       color: "from-purple-200 via-pink-300 to-purple-400",
     },
     {
